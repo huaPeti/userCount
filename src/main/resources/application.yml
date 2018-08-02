@@ -9,15 +9,16 @@ logging:
 ##mybatis
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.example.count.com.example.count.dao
 ##datasource
 spring:
   datasource:
-    url: jdbc:postgresql://49.4.14.245:8000/postgres?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    url: jdbc:postgresql://49.4.14.245:8000/bdri_dws?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
     username: donotinputwrongpwd
     password: 123qwe!@#
     driver-class-name: org.postgresql.Driver
   freemarker:
-    cache: false #ÎªÁËÈÈ¼ÓÔØ
+    cache: false #Îªï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½
     charset: utf-8
     content-type: text/html
     enabled: true

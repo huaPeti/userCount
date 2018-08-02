@@ -11,9 +11,11 @@ import java.util.List;
  * @create 2018-07-31 14:29
  **/
 public interface UserCountService {
-    boolean save(UserCount userCount);
-    List<UserCount> findAll();
-    boolean update(UserCount userCount);
+	
+	boolean save(UserCount userCount);
+
+	List<UserCount> findAll();
+
+	boolean update(UserCount userCount);
 
 }
-

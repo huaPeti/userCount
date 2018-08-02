@@ -7,16 +7,16 @@
         <result column="counts" property="counts"/>
         <result column="button_name" property="buttonName"/>
     </resultMap>
-    <select id="selectAll" resultType="com.example.count.com.example.count.dao.UserCount">
-        select count_id,counts,button_name from user_count
+    <select id="selectAll" resultMap="baseMap">
+        select count_id,counts,button_name from zhangmin_test.user_count
     </select>
-    <select id="selectByPk">
-        select count_id,counts,button_name from user_count WHERE count_id=#{countId}
+    <select id="selectByPk" resultMap="baseMap">
+        select count_id,counts,button_name from zhangmin_test.user_count WHERE count_id=#{countId}
     </select>
     <insert id="save">
-        insert into user_count VALUES (#{countId},#{counts},#{buttonName})
+        insert into zhangmin_test.user_count VALUES (#{countId},#{counts},#{buttonName})
     </insert>
     <update id="update">
-        update user_count SET counts=#{counts} WHERE count_id=#{countId}
+        update zhangmin_test.user_count SET counts=#{counts} WHERE count_id=#{countId}
     </update>
 </mapper>

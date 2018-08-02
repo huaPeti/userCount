@@ -1,17 +1,15 @@
 package com.example.count.com.example.count.mapper;
 
-import com.example.count.com.example.count.dao.UserCount;
-import org.apache.ibatis.annotations.Mapper;
-
-import javax.jws.soap.SOAPBinding;
 import java.util.List;
+
+import com.example.count.com.example.count.dao.UserCount;
 
 /**
  * @author chen1
  * @annotation:mapper类
  * @create 2018-07-31 14:09
  **/
-@Mapper
+
 public interface UserCountMapper {
     //保存
      int save(UserCount userCount);
