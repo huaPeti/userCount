@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.count.com.example.count.mapper.UserCountMapper">
+    <resultMap id="baseMap" type="com.example.count.com.example.count.dao.UserCount">
+        <id column="count_id" property="countId"/>
+        <result column="counts" property="counts"/>
+        <result column="button_name" property="buttonName"/>
+    </resultMap>
+    <select id="selectAll" resultType="com.example.count.com.example.count.dao.UserCount">
+        select count_id,counts,button_name from user_count
+    </select>
+    <select id="selectByPk">
+        select count_id,counts,button_name from user_count WHERE count_id=#{countId}
+    </select>
+    <insert id="save">
+        insert into user_count VALUES (#{countId},#{counts},#{buttonName})
+    </insert>
+    <update id="update">
+        update user_count SET counts=#{counts} WHERE count_id=#{countId}
+    </update>
+</mapper>
